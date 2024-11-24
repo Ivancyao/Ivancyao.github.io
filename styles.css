@@ -1,78 +1,123 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Encabezado */
+.header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 10px;
+}
+
 .title {
-	font-size: 1.5em;
-	font-weight: bold;
-	text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
 }
+
 .subtitle {
-	font-size: 1em;
-	text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
 }
 
-.desk {
-	position: fixed;
-	left: 50%;
-	top: 20%;
-	transform: translate(-50%, -20%);
-	max-width: 30vh;
-	max-height: 30vh;
-	width: 100%;
-	height: 100%;
-	background-color: grey;
-	border-radius: 20px;
-	margin: 0.5em;
-	padding: 20px;
-}
-.div-mobile {
-	position: fixed;
-	left: 50%;
-	top: 20%;
-	transform: translate(-50%, -20%);
-	max-width: 30vh;
-	max-height: 30vh;
-	width: 100%;
-	height: 100%;
-	background-color: grey;
-	border-radius: 20px;
-	margin: 0.5em;
-	padding: 20px;
-}
-@media screen and (max-width: 1920px) {
-	.div-mobile {
-		visibility: hidden;
-	}
-}
-@media screen and (max-width: 906px) {
-	.desk {
-		visibility: hidden;
-	}
-	.div-mobile {
-		visibility: visible;
-	}
+.cta-buttons .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
 }
 
-.qr-space {
-	background-color: orange;
-	width: 100%;
-	height: 80%;
-	border-radius: 20px;
+.btn-primary {
+    background-color: #28a745;
 }
 
-.text-qr {
-	text-align: center;
-	color: #fff;
+.btn-primary:hover {
+    background-color: #218838;
 }
 
-.img-space {
-	background-color: red;
-	width: 100%;
-	height: 80%;
-	border-radius: 20px;
-}
-.img-style {
-	width: 100%;
-	height: 100%;
+.btn-secondary {
+    background-color: #6c757d;
 }
 
-.btn-descargar {
-	margin-top: 12px;
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* Sección QR */
+.qr-section {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.qr-image {
+    width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.qr-text {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Características */
+.features {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+.features-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.features-list li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+/* Pie de página */
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
 }
