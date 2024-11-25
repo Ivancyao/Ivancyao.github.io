@@ -144,3 +144,17 @@ a.button {
 	background-color: buttonface;
 	text-decoration: none;
 }
+/* Oculta QR y muestra botón de descarga en dispositivos móviles */
+.desk {
+    display: none;
+}
+
+/* Muestra QR y oculta botón de descarga en dispositivos de escritorio */
+@media (min-width: 768px) {
+    .div-mobile {
+        display: none;
+    }
+    .desk {
+        display: block;
+    }
+}
