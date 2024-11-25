@@ -118,5 +118,28 @@
 				</p>
 			</div>
 		</div>
+		<script>
+			// Función para mostrar/ocultar elementos según el ancho de la ventana
+			function toggleVisibility() {
+				const mobileButton = document.querySelector('.div-mobile'); // Botón de descarga
+				const desktopQR = document.querySelector('.desk'); // QR
+
+				if (window.innerWidth < 768) {
+					// En dispositivos móviles
+					mobileButton.style.display = 'block';
+					desktopQR.style.display = 'none';
+				} else {
+					// En dispositivos de escritorio
+					mobileButton.style.display = 'none';
+					desktopQR.style.display = 'block';
+				}
+			}
+
+			// Llama a la función al cargar la página
+			toggleVisibility();
+
+			// Escucha cambios de tamaño de ventana
+			window.addEventListener('resize', toggleVisibility);
+		</script>
 	</body>
 </html>
