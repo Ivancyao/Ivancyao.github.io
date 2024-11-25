@@ -105,11 +105,6 @@
 	background-color: #d0ffe3;
 }
 
-@media screen and (max-width: 1920px) {
-	.div-mobile {
-		visibility: hidden;
-	}
-}
 @media screen and (max-width: 906px) {
 	.desk {
 		visibility: hidden;
@@ -117,6 +112,16 @@
 	.div-mobile {
 		visibility: visible;
 	}
+}
+
+@media screen and (min-width: 907px) {
+	.desk {
+		visibility: visible;
+	}
+	.div-mobile {
+		visibility: hidden;
+	}
+
 }
 
 .descarga {
