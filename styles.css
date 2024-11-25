@@ -1,40 +1,93 @@
+:root {
+	font-family: "Nunito", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.body {
+	display: flex;
+	flex-direction: column;
+	background-color: #d8eff4;
+}
+
+.header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 0.5em 1em;
+}
+.logo {
+	width: 60px;
+	height: 60px;
+	border-radius: 50px;
+}
+
 .title {
-	font-size: 1.5em;
 	font-weight: bold;
-	text-align: center;
+	padding-left: 8px;
 }
 .subtitle {
-	font-size: 1em;
+	padding: 0px;
+	font-size: 1.5em;
+	text-align: center;
+}
+.text-subtitle {
 	text-align: center;
 }
 
+.secciones {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.check-box {
+	display: flex;
+	flex-direction: column;
+	padding: 16px;
+	margin: 16px;
+	width: 30vh;
+	height: 80vh;
+	background-color: #fff;
+	border-radius: 20px;
+}
+
+.title-check-box {
+	font-size: 1.2em;
+	font-weight: bold;
+	padding: 0;
+	text-align: center;
+}
+
+.img-check-box {
+	width: 100%;
+	height: 40%;
+	border-radius: 30px;
+}
+
 .desk {
-	position: fixed;
-	left: 50%;
-	top: 20%;
-	transform: translate(-50%, -20%);
+	display: flex;
+	flex-direction: column;
+	position: absolute; /* Cambiado a relative */
+	margin-top: auto; /* Asegura que el div esté al final del contenedor */
+	width: 100%; /* Ajusta el ancho según tus necesidades */
+	text-align: center; /* Opcional: para centrar el contenido dentro del div */
 	max-width: 30vh;
 	max-height: 30vh;
-	width: 100%;
-	height: 100%;
-	background-color: grey;
 	border-radius: 20px;
 	margin: 0.5em;
 	padding: 20px;
 }
 .div-mobile {
-	position: fixed;
-	left: 50%;
-	top: 20%;
-	transform: translate(-50%, -20%);
+	display: flex;
+	flex-direction: column;
+	width: 100%; /* Ajusta el ancho según tus necesidades */
 	max-width: 30vh;
-	max-height: 30vh;
-	width: 100%;
-	height: 100%;
-	background-color: grey;
+	max-height: 40vh;
 	border-radius: 20px;
 	margin: 0.5em;
 	padding: 20px;
+	background-color: #d0ffe3;
 }
 @media screen and (max-width: 1920px) {
 	.div-mobile {
@@ -50,6 +103,15 @@
 	}
 }
 
+.descarga {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-bottom: 24px;
+	margin-bottom: 20px;
+}
+
 .qr-space {
 	background-color: orange;
 	width: 100%;
@@ -59,11 +121,9 @@
 
 .text-qr {
 	text-align: center;
-	color: #fff;
 }
 
 .img-space {
-	background-color: red;
 	width: 100%;
 	height: 80%;
 	border-radius: 20px;
@@ -73,6 +133,14 @@
 	height: 100%;
 }
 
-.btn-descargar {
-	margin-top: 12px;
+a.button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1px 6px;
+	border: 1px outset buttonborder;
+	border-radius: 16px;
+	color: buttontext;
+	background-color: buttonface;
+	text-decoration: none;
 }
