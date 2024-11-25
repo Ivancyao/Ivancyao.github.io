@@ -1,5 +1,12 @@
 :root {
 	font-family: "Nunito", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	box-sizing: border-box; /* Asegura que el padding y borde estén incluidos en el tamaño total */
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit; /* Hereda el box-sizing del root */
 }
 
 .body {
@@ -46,10 +53,12 @@
 	flex-direction: column;
 	padding: 16px;
 	margin: 16px;
-	width: 30vh;
-	height: 80vh;
+	width: 90%; /* Ajustado para ser más adaptable */
+	max-width: 30vh; /* Limita el ancho máximo */
+	height: auto; /* Elimina el alto fijo para permitir que crezca dinámicamente */
 	background-color: #fff;
 	border-radius: 20px;
+	overflow: hidden; /* Evita que el contenido exceda los bordes */
 }
 
 .title-check-box {
@@ -59,29 +68,35 @@
 	text-align: center;
 }
 
+.text-checkbox {
+	word-wrap: break-word; /* Asegura que las palabras largas se ajusten */
+	overflow-wrap: break-word;
+	text-align: justify; /* Justifica el texto para una mejor presentación */
+}
+
 .img-check-box {
 	width: 100%;
-	height: 40%;
+	height: auto; /* Permite que la imagen se ajuste proporcionalmente */
 	border-radius: 30px;
 }
 
 .desk {
 	display: flex;
 	flex-direction: column;
-	position: absolute; /* Cambiado a relative */
-	margin-top: auto; /* Asegura que el div esté al final del contenedor */
-	width: 100%; /* Ajusta el ancho según tus necesidades */
-	text-align: center; /* Opcional: para centrar el contenido dentro del div */
+	position: relative; /* Cambiado a relativo */
+	width: 100%;
+	text-align: center;
 	max-width: 30vh;
 	max-height: 30vh;
 	border-radius: 20px;
 	margin: 0.5em;
 	padding: 20px;
 }
+
 .div-mobile {
 	display: flex;
 	flex-direction: column;
-	width: 100%; /* Ajusta el ancho según tus necesidades */
+	width: 100%;
 	max-width: 30vh;
 	max-height: 40vh;
 	border-radius: 20px;
@@ -89,6 +104,7 @@
 	padding: 20px;
 	background-color: #d0ffe3;
 }
+
 @media screen and (max-width: 1920px) {
 	.div-mobile {
 		visibility: hidden;
@@ -125,12 +141,12 @@
 
 .img-space {
 	width: 100%;
-	height: 80%;
+	height: auto; /* Ajusta automáticamente el alto basado en el ancho */
 	border-radius: 20px;
 }
 .img-style {
 	width: 100%;
-	height: 100%;
+	height: auto; /* Mantiene las proporciones de la imagen */
 }
 
 a.button {
