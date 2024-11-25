@@ -120,7 +120,7 @@
 		</div>
 		<script>
 			// Función para mostrar/ocultar elementos según el ancho de la ventana
-			function toggleVisibility() {
+			function ajustarPantalla() {
 				const mobileButton = document.querySelector('.div-mobile'); // Botón de descarga
 				const desktopQR = document.querySelector('.desk'); // QR
 
@@ -136,9 +136,9 @@
 			}
 
 			// Llama a la función al cargar la página
-			toggleVisibility();
+			ajustarPantalla();
 
-			// Escucha cambios de tamaño de ventana
+			// Verifica cambios de tamaño de ventana
 			window.addEventListener('resize', toggleVisibility);
 		</script>
 	</body>
